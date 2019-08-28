@@ -48,25 +48,7 @@
                       <div class="carousel-item active">
                         <img src="https://i.blogs.es/5ceb9d/dwelllarge-1-/1366_2000.jpg" class="d-block w-100 img-fluid" alt="...">
                         <div class="card-img-overlay container">
-                                <div class="card row col-md-3 ml-md-auto" style="width: 18rem;">
-                                        <div class="card-body ">
-                                          <h5 class="card-title">Special title treatment</h5>
-                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                      </div>
-                                <div class="card row col-md-3" style="width: 18rem;">
-                                        <div class="card-body ">
-                                          <h5 class="card-title">Special title treatment</h5>
-                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                 </div>
-                              </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://cdn.pixabay.com/photo/2016/04/18/08/50/interior-1336161_960_720.jpg" class="d-block w-100 img-fluid" alt="...">
-                        <div class="card-img-overlay container">
+                                {% for product in productos1%}
                                 <div class="card mb-4" style="max-width: 440px;">
                                         <div class="row no-gutters" style="height: 14rem">
                                           <div class="col-md-4">
@@ -74,13 +56,35 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="card-body">
-                                              <h5 class="card-title">trapos</h5>
+                                              <h5 class="card-title">{{product.nombre}}</h5>
                                               <p class="card-text">Manten tu hogar simpre limpio con los trapos de microfibra</p>
                                               <a href="#" class="btn btn-primary">Comprar</a>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
+                                {% endfor%}
+                              </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://cdn.pixabay.com/photo/2016/04/18/08/50/interior-1336161_960_720.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <div class="card-img-overlay container">
+                                {% for product in productos1%}
+                                <div class="card mb-4" style="max-width: 440px;">
+                                        <div class="row no-gutters" style="height: 14rem">
+                                          <div class="col-md-4">
+                                            <img src="https://ae01.alicdn.com/kf/HTB1qkh4LVXXXXbBXVXXq6xXFXXXc/4-unids-pack-nueva-Eco-Friendly-toalla-de-lavado-magia-cocina-limpieza-trapos-de-limpieza-trapo.jpg_640x640.jpg" class="d-block w-100 img-fluid" alt="...">
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h5 class="card-title">{{product.nombre}}</h5>
+                                              <p class="card-text">Manten tu hogar simpre limpio con los trapos de microfibra</p>
+                                              <a href="#" class="btn btn-primary">Comprar</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                {% endfor%}
                               </div>
                       </div>
                       <div class="carousel-item">
