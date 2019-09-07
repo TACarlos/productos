@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/producto.css' %}">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logon.ico' %}" />
+        <title>Najera</title>
+</head>
+<body style="background: rgb(223, 223, 223)">
+  <header>
+    <div class="navbar-fixed">
+        <nav>
+                <div class="nav-wrapper row" style="background: blueviolet;">
+                  <a href="/" class="left"><img src="{% static 'images/logon.png' %}" alt="" style="width: 5rem;"></a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                  <a class="waves-effect waves-light btn-large right sidenav-trigger " style="background: blueviolet; min-width: 20rem auto;">
+                      <form>
+                          <div class="input-field col s12">
+                            <input id="search" type="search" required">
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                          </div>
+                        </form>
+                  </a>
+                  <ul class="right hide-on-med-and-down">
+                    <li>
+                      <a class="waves-effect waves-light btn-large " style="background: blueviolet; width: 50rem;">
+                          <form>
+                              <div class="input-field col s12">
+                                <input id="search" type="search" required">
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                              </div>
+                            </form>
+                      </a></li>
+                        <li><a href="{% url 'lista_prod'%}">Productos</a></li>
+                        <li><a href="#">Contactos</a></li>
+                        <li><a href="#">Acerca de...</a></li>
+                        <li><a href="#">Mobile</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div> 
+            </header>
+  <main> 
+    {% block content %}
+    {% endblock %}
+          </main> 
+          <ul class="sidenav" id="mobile-demo">
+            <div class="row">
+              <div class="col s2">
+              <a href="/" class="">
+                <img src="{% static 'images/logon.png' %}" alt="" style="width: 10rem; padding: 2px;">
+                <h4>Najera</h4>
+              </a>
+            </div>
+            </div>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contactos</a></li>
+              <li><a href="#">Acerca de...</a></li>
+              <li><a href="#">Mobile</a></li>
+            </ul>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+      var elems = document.querySelectorAll('.slider');
+      var instances = M.Slider.init(elems,{
+           indicators:false,
+           height:500,
+           interval:6000,
+           
+          });
+      });
+
+</script>
+</body>
+</html>
