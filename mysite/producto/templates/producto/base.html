@@ -18,9 +18,20 @@
                 <div class="nav-wrapper row" style="background: blueviolet;">
                   <a href="/" class="left"><img src="{% static 'images/logon.png' %}" alt="" style="width: 5rem;"></a>
                   <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-                  <a class="waves-effect waves-light btn-large right sidenav-trigger " style="background: blueviolet; min-width: 20rem auto;">
+                  <a class="waves-effect right sidenav-trigger " style="background: blueviolet; width:60%;">
+                    
                       <form>
-                          <div class="input-field col s12">
+                          <div class="input-field">
+                            <input id="search" type="search" required">
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                          </div>
+                        </form>
+                  </a>
+                  <a class="waves-effect hide-on-med-and-down center" style="background: blueviolet; width:50%; height: 90%;">
+                    
+                      <form>
+                          <div class="input-field">
                             <input id="search" type="search" required">
                             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                             <i class="material-icons">close</i>
@@ -28,16 +39,6 @@
                         </form>
                   </a>
                   <ul class="right hide-on-med-and-down">
-                    <li>
-                      <a class="waves-effect waves-light btn-large " style="background: blueviolet; width: 50rem;">
-                          <form>
-                              <div class="input-field col s12">
-                                <input id="search" type="search" required">
-                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
-                              </div>
-                            </form>
-                      </a></li>
                         <li><a href="{% url 'lista_prod'%}">Productos</a></li>
                         <li><a href="#">Contactos</a></li>
                         <li><a href="#">Acerca de...</a></li>
