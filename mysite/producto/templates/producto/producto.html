@@ -1,6 +1,11 @@
 {% extends 'producto/base.html' %} {% load static %}
 {% block content %}
-      <div class="slider" style="position: relative;">
+<!-- _________________________________modo movil_______________________________-->
+    <div class="container">
+
+    </div>
+<!-- _________________________________Paginacion de imagenes_______________________________-->
+      <div class="slider hide-on-med-and-down" style="position: relative; top: 1rem;">
             <ul class="slides">
               <li>
                 <img src="http://www.deceramica.com/wp-content/uploads/home_grid-stack04-1.jpg">
@@ -102,6 +107,8 @@
               </li>
             </ul>
           </div>
+
+   <!-- _________________________________Contenedor de productos grande_______________________________-->     
           <div class="container">       
           <div class="row" style="padding-top: 1rem;">
                 <div class="col s12 m4">
@@ -151,7 +158,7 @@
                               </div>
               </div></div>  
               
-              <div class="">       
+ <!-- _________________________________contenedor de productos chico_______________________________-->                   
                   <div class="row" style="padding-top: 1rem;">
                       <div class="">
                           <div class="col s6 m2">
@@ -166,7 +173,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="">
+                        
                             <div class="col s6 m2">
                               <div class="card">
                                 <div class="card-image">
@@ -178,7 +185,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="">
+                            
                                 <div class="col s6 m2">
                                   <div class="card">
                                     <div class="card-image">
@@ -190,7 +197,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="">
+                                
                                     <div class="col s6 m2">
                                       <div class="card">
                                         <div class="card-image">
@@ -202,7 +209,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="">
+                                    
                                         <div class="col s6 m2">
                                           <div class="card">
                                             <div class="card-image">
@@ -225,5 +232,5 @@
                                               </div>
                                             </div>
                                           </div>
-                      </div></div>
+                      </div>
 {% endblock %}

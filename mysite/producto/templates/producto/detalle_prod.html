@@ -1,0 +1,12 @@
+{% extends 'producto/base.html' %}{% load static %}
+
+{% block content %}
+{% if prod.imagen %}
+<img src="{{prod.imagen.url}}" alt="">
+{% else %}
+<img src="{% static 'images/logon.png' %}" alt="">
+{% endif %}
+<h1>{{ prod.nombre}}</h1>
+<p>{{prod.descripcion}}</p>
+<p>{{prod.precio}}</p>
+{% endblock %}

@@ -14,44 +14,34 @@
 <body style="background: rgb(223, 223, 223)">
   <header>
     <div class="navbar-fixed">
-        <nav>
-                <div class="nav-wrapper row" style="background: blueviolet;">
-                  <a href="/" class="left"><img src="{% static 'images/logon.png' %}" alt="" style="width: 5rem;"></a>
-                  <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-                  <a class="waves-effect right sidenav-trigger " style="background: blueviolet; width:60%;">
-                    
-                      <form>
-                          <div class="input-field">
-                            <input id="search" type="search" required">
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
+        <nav class="nav-extended" style="background: blueviolet; height: 5rem;">
+            <a href="/" class="right brand-logo  hide-on-med-and-down"><img src="{% static 'images/logon.ico' %}" alt="" style="width: 5rem;"></a>
+            <a href="/" class="left brand-logo sidenav-trigger"><img src="{% static 'images/logon.ico' %}" alt="" style="width: 5rem;"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>    
+                <div class="nav-content hide-on-med-and-down" style="padding-top: 1rem;">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a class="active" href="/">Inicio</a></li>
+                        <li class="tab"><a href="{% url 'lista_prod'%}">Productos</a></li>
+                        <li class="tab"><a href="">Contacto</a></li>
+                        <li class="tab"><a href="">Acerca de ..</a></li>
+                        <div class="row">
+                            <form class="col s5">
+                              <div class="row" style="background: white; padding-left: 1rem;">
+                                <input type="search" name="search" id="" placeholder="Buscar Productos">
+                                <button type="submit" class="btn-small">Buscar</button>
+                              </div>
+                            </form>
                           </div>
-                        </form>
-                  </a>
-                  <a class="waves-effect hide-on-med-and-down center" style="background: blueviolet; width:50%; height: 90%;">
-                    
-                      <form>
-                          <div class="input-field">
-                            <input id="search" type="search" required">
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                          </div>
-                        </form>
-                  </a>
-                  <ul class="right hide-on-med-and-down">
-                        <li><a href="{% url 'lista_prod'%}">Productos</a></li>
-                        <li><a href="#">Contactos</a></li>
-                        <li><a href="#">Acerca de...</a></li>
-                        <li><a href="#">Mobile</a></li>
-                  </ul>
+                      </ul>
+                    </div>
+                   </nav>
                 </div>
-              </nav>
-            </div> 
             </header>
   <main> 
     {% block content %}
     {% endblock %}
-          </main> 
+          </main>
+           
           <ul class="sidenav" id="mobile-demo">
             <div class="row">
               <div class="col s2">

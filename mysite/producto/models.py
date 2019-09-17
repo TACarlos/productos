@@ -5,6 +5,7 @@ class Productos (models.Model):
     descripcion = models.TextField()
     precio = models.CharField(max_length=5, blank=True, null= True)
     cantidad = models.CharField(max_length=5)
+    imagen = models.FileField(null=True, blank=True)
     
     def __str__(self):
         return self.nombre
